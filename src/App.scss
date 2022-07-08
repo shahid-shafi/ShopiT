@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    ul {
+        @apply list-none
+    }
+    .navlist {
+        @apply flex mr-3 absolute sm:static w-full sm:w-auto left-0 top-[88%] sm:bg-opacity-0 sm:text-white bg-dark text-black gap-5
+    }
+    
+    .nav-item:after {
+        content:"";
+        @apply md:left-auto md:absolute md:h-0.5 md:bg-white md:top-[100%] md:w-0     
+    }
+
+    .nav-item:hover:after {
+        @apply block transition-all duration-300 w-2/3
+    }
+
+    .card-button{
+     @apply text-center font-bold text-sm py-2 px-6 bg-primary rounded bottom-4
+    }
+
+    .cart{
+        @apply absolute w-[100%] md:w-auto top-[100%] right-0 p-4 space-y-3 bg-white text-black md:rounded-xl shadow-md shadow-black
+    }
+
+    .card-search {
+        @apply py-2 px-2.5 border-lightgray border rounded bg-primary text-lightgray hover:text-white
+    }
+
+    .card-favourite{
+        @apply py-2 px-2.5 border-lightgray border rounded bg-primary text-lightgray hover:text-white
+    }
+
+    .social{
+        @apply w-10 h-10 bg-light rounded-full flex justify-center items-center hover:text-white
+    }
+
+   .imageSlider{
+    @apply absolute text-2xl md:text-6xl py-4 md:py-14 bg-black bg-opacity-20 hover:bg-opacity-40 text-primary cursor-pointer
+   }
+}
+.section{
+    position: relative;
+}
+.section::before{
+    content: url('../public/Images/pseudoWhite.png');
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+}
+
+.section::after{
+    content: url('../public/Images/pseudoYellow.png');
+    position: absolute;
+    right: 0;
+    width: auto;
+}
+ .swal2-cancel {
+    color: #555555 !important;
+    border: 1px solid #a0a0a0 !important;
+}
+//:-----------FOOTER----------- :// 
+
+.footer::before{
+    content: url('../public/Images/bg-footer.webp');
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+// .swal2-confirm {
+//     font-size: .8rem !important;
+//     border: 1px solid #a4a4a4;
+//     padding: .3rem .5rem !important;
+//     font-weight: 400 !important;
+// }
+// .swal2-title {
+//     font-size: 1.2rem !important;
+//     padding: 0 !important;
+// }
+// .swal2-html-container {
+//     font-size: 1rem !important;
+//     margin-top: .5rem !important;
+// }
+
+// .swal2-icon {
+//     margin: auto !important;
+//     width: 2.5rem !important;
+//     height: 2.5rem !important;
+// }
+// .swal2-icon-content {
+//     font-size: 2rem !important;
+// }
+// .swal2-popup {
+//     width: auto !important;
+    // transform: scale(.6) !important;
+// }
+// .swal2-actions {
+//     margin: .5rem !important;
+// }
+
