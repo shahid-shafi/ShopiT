@@ -81,7 +81,7 @@ const Genre = () => {
                         </div>)}
                     </div>}
                     <div className='w-8 md:w-16 h-8 md:h-16 m-auto overflow-hidden'>
-                        <img src={item.imgSrc} alt="" />
+                        <img src={process.env.PUBLIC_URL + item.imgSrc} alt="" />
                     </div>
                     <h1 className='flex items-center justify-center group-hover:text-primary'>{item.name}{item.arrowDown}</h1>
                 </div></NavLink>

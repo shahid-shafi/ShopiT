@@ -16,7 +16,8 @@ const slides = [
     },
     {
         url: '/Images/Carousal/image-5.jpg'
-    }
+    },
+    
 ]
 
 const Carousal = () => {
@@ -51,7 +52,7 @@ const Carousal = () => {
             <div className='relative h-36 md:h-72 flex items-center'>
                 <div className='absolute imageSlider' onClick={handleOnPrevious}><BsChevronCompactLeft /></div>
 
-                <div className='bg-center h-36 md:h-72 w-screen bg-cover bg-no-repeat' style={{ backgroundImage: `url(${slides[currentIndex].url})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover',}}></div>
+                <div className='bg-center h-36 md:h-72 w-screen bg-cover bg-no-repeat' style={{ backgroundImage: `url(${process.env.PUBLIC_URL + slides[currentIndex].url})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover',}}></div>
 
                 <div className='absolute imageSlider right-0' onClick={handleOnNext}><BsChevronCompactRight /></div>
             </div>

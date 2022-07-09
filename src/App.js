@@ -8,8 +8,8 @@ import Header from './components/Header/Header';
 import ContactSection from "./components/ContactSection/ContactSection";
 import Swal from 'sweetalert2';
 import Genre from './components/Genre/Genre';
-import SectionCard from './components/Card/SectionCard';
-import ProductDetail from './components/ProductDetail.jsx/ProductDetail';
+// import SectionCard from './components/Card/SectionCard';
+// import ProductDetail from './components/ProductDetail.jsx/ProductDetail';
 
 
 
@@ -130,10 +130,9 @@ function App() {
   return (
     
     <Router>
-      <ProductDetail/>
       {/* {items.map(item => <SectionCard item={item}/>
 )} */}
-      {/* <Header uniqueCartItems={cart}
+      <Header uniqueCartItems={cart}
         handleDeleteFromCart={removeFromCartHandler}
         onAddHandler={onAddHandler}
         onRemoveHandler={onRemoveHandler}
@@ -142,10 +141,10 @@ function App() {
        <CustomRouter items={items}
         addToCartHandler={addToCartHandler}
         cart={cart || []}
-      />  */}
+      /> 
        {/* <Newsletter />  */}
-      {/* <ContactSection addToCartHandler={addToCartHandler}/>
-      <Footer /> */}
+      <ContactSection addToCartHandler={addToCartHandler}/>
+      <Footer />
     </Router> 
   );
 }

@@ -10,6 +10,7 @@ import WomensWear from '../../pages/WomensWear'
 import Cosmetics from '../../pages/Cosmetics'
 import Mobiles from '../../pages/Mobiles'
 import KidsWear from '../../pages/KidsWear'
+import ProductDetail from '../ProductDetail.jsx/ProductDetail'
 
 const CustomRouter = ({ items, addToCartHandler, cart }) => {
   return (
@@ -24,6 +25,7 @@ const CustomRouter = ({ items, addToCartHandler, cart }) => {
       <Route path='/fashion/kids-wear' element={<KidsWear addToCartHandler={addToCartHandler}/>} />
       <Route path='/cosmetic' element={<Cosmetics addToCartHandler={addToCartHandler}/>} />
       <Route path='/mobiles' element={<Mobiles addToCartHandler={addToCartHandler}/>} />
+      <Route path='/product-detail' element={<ProductDetail/>}/>
 
     </Routes>
   )
