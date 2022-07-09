@@ -8,7 +8,7 @@ const Card = ({ addToCartHandler, item }) => {
   let discountedPrice = Math.round(item.price - (item.price * (item.discount / 100)));
 
   return (
-    <div className='group text-center rounded-xl hover:shadow-black hover:shadow-md transition-all duration-200 scale-75 sm:scale-90 pb-4 max-w-[315px]'>
+    <div  className='group text-center rounded-xl hover:shadow-black hover:shadow-md transition-all duration-200 scale-75 sm:scale-90 pb-4 max-w-[315px]'>
       <div className='px-4 h-[200px] md:h-[260px] py-4 bg-dimgray rounded-t-xl flex justify-center'><img className='py-1' src={item.imgSrc} alt="" /></div>
       <div className='py-4 space-y-4'>
         <h1 className='font-bold text-black px-2 text-xs sm:text-base'>{item.brand}</h1>
