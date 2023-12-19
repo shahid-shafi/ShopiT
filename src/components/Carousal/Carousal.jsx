@@ -30,7 +30,9 @@ const Carousal = () => {
             const newIndex = isLastSlide ? 0 : currentIndex + 1;
             setCurrentIndex(newIndex)
         }, 3000);
-        return () => window.clearTimeOut(timer);
+        return () => {
+            clearTimeout(timer);
+        };
     }, [currentIndex])
 
 
