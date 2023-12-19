@@ -222,7 +222,7 @@ const grocery = [
 
 const GroceryItems = ({ addToCartHandler }) => {
     return (
-        <div className=' bg-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-content-center'>
+        <div className='grid grid-cols-1 bg-white sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-content-center'>
             {grocery.map(item =>
                 <Card
                     key={item.id}
