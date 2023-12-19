@@ -17,20 +17,20 @@ const slides = [
     {
         url: '/Images/Carousal/image-5.jpg'
     },
-    
+
 ]
 
 const Carousal = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
-       const timer = setTimeout(() => {
+        const timer = setTimeout(() => {
             setCurrentIndex(currentIndex + 1)
             const isLastSlide = currentIndex === slides.length - 1;
             const newIndex = isLastSlide ? 0 : currentIndex + 1;
             setCurrentIndex(newIndex)
         }, 3000);
-    return () => clearSetTimeOut(timer);
+        return () => window.clearTimeOut(timer);
     }, [currentIndex])
 
 
@@ -50,12 +50,12 @@ const Carousal = () => {
 
     return (
         <div className='relative p-2 bg-light'>
-            <div className='relative h-36 md:h-72 flex items-center'>
+            <div className='relative flex items-center h-36 md:h-72'>
                 <div className='absolute imageSlider' onClick={handleOnPrevious}><BsChevronCompactLeft /></div>
 
-                <div className='bg-center h-36 md:h-72 w-screen bg-cover bg-no-repeat' style={{ backgroundImage: `url(${process.env.PUBLIC_URL + slides[currentIndex].url})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover',}}></div>
+                <div className='w-screen bg-center bg-no-repeat bg-cover h-36 md:h-72' style={{ backgroundImage: `url(${process.env.PUBLIC_URL + slides[currentIndex].url})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }}></div>
 
-                <div className='absolute imageSlider right-0' onClick={handleOnNext}><BsChevronCompactRight /></div>
+                <div className='absolute right-0 imageSlider' onClick={handleOnNext}><BsChevronCompactRight /></div>
             </div>
 
             <div className='absolute bottom-2 text-white left-[46%] flex md:text-2xl text-base cursor-pointer text-center'>{slides.map((slide, slideIndex) => <div className='hover:text-primary opacity-70 hover:opacity-100'><GoPrimitiveDot onClick={() => handleOnSlide(slideIndex)} /></div>)}</div>
