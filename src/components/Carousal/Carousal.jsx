@@ -24,12 +24,13 @@ const Carousal = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
-        setTimeout(() => {
+       const timer = setTimeout(() => {
             setCurrentIndex(currentIndex + 1)
             const isLastSlide = currentIndex === slides.length - 1;
             const newIndex = isLastSlide ? 0 : currentIndex + 1;
             setCurrentIndex(newIndex)
         }, 3000);
+    return () => clearSetTimeOut(timer);
     }, [currentIndex])
 
 
